@@ -36,7 +36,7 @@ public abstract class GlResourceManagerMixin {
     @Inject(method = "setPipelineAndApplyState", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/opengl/GlStateManager;_polygonMode(II)V"))
     private void setPipelineAndApplyState$lineSmooth(RenderPipeline pipeline, CallbackInfo info) {
         if (((IRenderPipeline) pipeline).meteor$getLineSmooth()) {
-            glEnable(GL_LINE_SMOOTH);
+            //glEnable(GL_LINE_SMOOTH);
             glLineWidth(1);
         }
         else {
